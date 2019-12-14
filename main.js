@@ -1,5 +1,4 @@
-/* Modal */
-
+/* Modal Window */
 
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("cartBtn");
@@ -15,9 +14,6 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-
-
 
 /* Shopping Cart */
 
@@ -80,7 +76,6 @@ function addToCartClicked(event) {
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
     addItemToCart(title, price, imageSrc)
-    alert("Your Item has been added to shopping cart!")
     updateCartTotal()
 }
 
@@ -130,7 +125,7 @@ function updateCartTotal() {
 
 
 /* NAVBAR */
-function myFunction() {
+function navFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
       x.className += " responsive";
