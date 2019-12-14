@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
   <title>The Wave</title>
   <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-<!-- Header and Nav Bar -->
+<!-- HEADER -->
 <header class="header">
         <div class="topnav" id="myTopnav">
                 <a href="#home">Home</a>
@@ -18,7 +16,7 @@
                 <a href="#contact">Womens Collection</a>
                 <a href="#about">Accesories</a>
                 <a href="#cart" id="cartBtn">Cart</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <a href="javascript:void(0);" class="icon" onclick="navFunction()">
                   <i class="fa fa-bars"></i>
                 </a>
               </div>
@@ -30,7 +28,7 @@
     </div>
 </header>
 
-<!-- Choose Collection Section -->
+<!-- Collection Section -->
 <div class="grid-container">
 
         <article id="3685" class="location-listing">
@@ -96,6 +94,20 @@
         </div>
     </section>
 
+    <footer>
+      <h2>Stay Connected</h2>
+      <p>Find New Deals First!</p>
+      <form class="footer-form" method="get">
+        <input type="email" placeholder="Email Address">
+        <button class="sign-btn">Sign Up</button>
+      </form>
+      <div class="footer-social">
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+      </div>
+    </footer>
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -106,6 +118,7 @@
             <div class="cart-items">
             </div>
             <div class="cart-total">
+              <div class="thank-you"></div>
                 <strong class="cart-total-title">Total</strong>
                 <span class="cart-total-price">$0.00</span>
             </div>
