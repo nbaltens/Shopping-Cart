@@ -1,4 +1,3 @@
-/* Basic SetUp */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,7 @@ html {
 
   /* Heading */
 .header {
-    background:linear-gradient(0deg,rgba(255,0,150,0.1),rgba(255,0,150,0.2)),url("./img/head_img.jpg");
+    background:linear-gradient(0deg,rgba(255,0,150,0.2),rgba(255,0,150,0.2)),url("./img/head_img.jpg");
     height: 100vh;
     width: 100%;
     background-position: top center;
@@ -24,15 +23,16 @@ html {
     text-align: center;
     margin: auto;
     color: #fff;
-    padding-top: 250px;
+    padding-top: 200px;
     
 }
 .header-content h1 {
-    font-size: 80px;;
+    font-size: 80px;
+    font-weight: 600;
 }
 .header-content h3 {
-    margin: 30px;
-    font-size: 30px;
+    margin: 20px;
+    font-size: 35px;
 }
 .header-btn {
     background-color: transparent;
@@ -43,9 +43,11 @@ html {
     margin-top: 30px;
     font-size: 20px;
     border: 2px solid white;
+    transition: 0.5s;
+    font-weight: 300;
 }
 .header-btn:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
     cursor: pointer;
     color: white;
 }
@@ -69,7 +71,7 @@ html {
 .topnav {
     background-color: black;
     overflow: hidden;
-    position: fixed;
+    
     width: 100%;
   }
   
@@ -102,12 +104,11 @@ html {
   }
   
   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-    grid-gap: 0;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-around;
   }
-  
-  /* hover styles */
+
   .location-listing {
     position: relative;
   }
@@ -139,7 +140,6 @@ html {
     transition: opacity .1s;
     background: rgba(0,0,0,0.4);
     color: white;
-    /* position the text in t’ middle*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,8 +153,6 @@ html {
     filter: blur(1px);
   }
   
-
-
 /* Shop Collection */
 .collection_head {
     text-align: center;
@@ -184,23 +182,26 @@ background-image: url("./img/hat.png");
     background-image: url("./img/board_shorts.jpg");
 }
 
+/* Shop item */
+
 .shop-item-button {
-    background-color: transparent;
+    background-color: #242323;
     width: auto;
     height: 40px;
     padding:5px;
-    color: black;
+    color: white;
     margin-top: 30px;
-    font-size: 15px;
-    border: 2px solid black;
+    font-size: 14px;
+    font-weight: 100;
     outline: 0;
 }
 .shop-item-button:hover {
     cursor: pointer;
+    background-color: black;
 }
 
 
-/* Shopping Cart */
+
 .new-section-header {
     text-align: center;
     margin: 40px;
@@ -247,6 +248,8 @@ background-image: url("./img/hat.png");
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+/* --Shopping Cart--  */
 
 
 .cart-header {
@@ -369,7 +372,7 @@ background-image: url("./img/hat.png");
     display: none; 
     position: fixed;
     z-index: 1; 
-    padding-top: 56px; 
+    padding-top: 48px; 
     left: 0;
     top: 0;
     width: 100%; 
@@ -377,17 +380,16 @@ background-image: url("./img/hat.png");
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
-    
   }
 
   .modal-content {
     position: relative;
     background-color: rgba(255,255,255, 0.92);;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #888;
     width: 90%;
-    height: 80%;
+    height: 90%;
 
   }
   
@@ -405,7 +407,59 @@ background-image: url("./img/hat.png");
     cursor: pointer;
   }
 
+  /*--FOOTER--*/
 
+  footer {
+    height: auto;
+    width: 100%;
+    background-color:black;
+    color: #fff;
+    padding: 20px;
+  }
+  .footer-form {
+    margin: 10px;
+  }
+  .footer-form input {
+    height: 25px;
+    width: 200px;
+  }
+  .footer-form button {
+    background-color: transparent;
+    border: solid #fff 1px;
+    font-size: 15px;
+    color: #fff;
+    padding: 5px;
+  }
+  .footer-form button:hover {
+    cursor: pointer;
+  }
+  footer h2 {
+    margin: px;
+    padding: 10px;
+    color: #f68cfa;
+  }
+  footer p {
+    margin: 10px;
+    font-size: 18px;
+  }
+  .footer-social {
+    margin: 30px auto;
+    display: block;
+    text-align: center;
+  }
+  .footer-social i {
+    display: inline;
+    font-size: 25px;
+    margin: 15px;
+    color: #f68cfa;
+    margin-top: 20px;
+  }
+  footer a {
+    text-decoration: none;
+  }
+  .sign-btn:hover {
+    cursor: pointer;
+  }
 
 /* Media Queries */
   @media screen and (max-width: 600px) {
@@ -428,6 +482,15 @@ background-image: url("./img/hat.png");
       display: block;
       text-align: left;
     }
+    .grid-container {
+      flex-wrap: wrap;
+    }
+    footer h2,
+    .footer-form,
+    footer p {
+      text-align: center;
+    }
+
   }
   @media (hover: none) { 
     .location-title {
@@ -437,10 +500,3 @@ background-image: url("./img/hat.png");
       filter: blur(2px);
     }
   }
-
-
-
-
-
- 
-  
